@@ -6,10 +6,18 @@ $btn-colors: (
 );
 
 $btn-size: (
-  small: ($font-size-s),
-  medium: ($font-size-m),
-  large: ($font-size-l),
-  full: ($font-size-l),
+  small: (
+    $font-size-s,
+  ),
+  medium: (
+    $font-size-m,
+  ),
+  large: (
+    $font-size-l,
+  ),
+  full: (
+    $font-size-l,
+  ),
 );
 
 .btn {
@@ -21,7 +29,7 @@ $btn-size: (
   border-width: 1px;
   border-style: solid;
   &:disabled {
-    opacity: .4;
+    opacity: 0.4;
     pointer-events: none;
   }
 
@@ -49,9 +57,9 @@ $btn-size: (
     &::before,
     &::after {
       @include absolute($top: 50%, $left: 50%);
-      @include size(12px,1px);
+      @include size(12px, 1px);
 
-      content:'';
+      content: "";
       background-color: #666;
     }
     &::before {
@@ -69,9 +77,9 @@ $btn-size: (
     &::before {
       @include size(16px);
 
-      content:'';
+      content: "";
       display: block;
-      background: url($path-img + 'ico_close.svg') 0 0 / 100% no-repeat;
+      // background: url($path-img + 'ico_close.svg') 0 0 / 100% no-repeat;
     }
   }
 }
