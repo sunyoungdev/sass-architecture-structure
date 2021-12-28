@@ -1,7 +1,7 @@
 .tab {
   position: sticky;
   top: 0;
-  z-index: z('level1');
+  z-index: z("level1");
   background-color: $white-color;
 }
 .tab-list {
@@ -14,7 +14,7 @@
     &::before {
       @include absolute($right: 0, $bottom: 0, $left: 0);
 
-      content: '';
+      content: "";
       height: 2px;
       background-color: $white-color;
       border-radius: 2px;
