@@ -1,0 +1,29 @@
+{
+  "name": "sass-architecture-structure",
+  "version": "1.0.0",
+  "description": "``` scss/ |- abstracts/ |   |– _function.scss    # Sass Functions |   |– _mixin.scss       # Sass Mixins |   |- _variables        # Sass Variables | |– base/ |   |– _reset.scss       # Reset/normalize |   |– _helper.scss      # Class & placeholders helpers |   ...                  # Etc… | |– components/ |   |– _buttons.scss     # Buttons |   |– _tab.scss         # Tab |   |– _tooltip.scss     # Tooltip |   ...                  # Etc… | |– layout/ |   |– _navigation.scss  # Navigation |   |– _header.scss      # Header |   |– _footer.scss      # Footer |   ...                  # Etc… | |– pages/ |   |– _home.scss        # Home specific styles |   |– _contact.scss     # Contact specific styles |   ...                  # Etc… | `– style.scss            # Primary Sass file ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunyoungdev/sass-architecture-structure.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunyoungdev/sass-architecture-structure/issues"
+  },
+  "homepage": "https://github.com/sunyoungdev/sass-architecture-structure#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
