@@ -8,15 +8,18 @@
     color: #666;
     background-color: $white-color;
     border: 1px solid #e0e0e0;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 5%);
   }
+
   .btn--tooltip {
     padding: 4px;
+
     &::before {
       @include size(16px);
 
       content: "";
       display: block;
+
       // background: url($path-img + 'ico_tooltip.svg') 0 0 / 100% no-repeat;
     }
   }

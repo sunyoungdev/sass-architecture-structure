@@ -3,8 +3,8 @@
 }
 
 @mixin clearfix {
-  &:after {
-    content: '';
+  &::after {
+    content: "";
     display: block;
     clear: both;
   }
@@ -52,17 +52,17 @@
 @mixin font-face($name, $font-path, $weight: null, $style: normal, $exts: (eot, woff2, woff, ttf)) {
   $src: null;
   $formats: (
-          otf: 'openType',
-          ttf: 'trueType',
+    otf: "openType",
+    ttf: "trueType",
   );
 
   @each $ext in $exts {
-    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-    $src: append($src, url(quote($font-path + '.' + $ext)) format(quote($format)), $separator: comma);
+    $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
+    $src: list.append($src, url(string.quote($font-path + '.' + $ext)) format(string.quote($format)), $separator: comma);
   }
 
   @font-face {
-    font-family: quote($name);
+    font-family: string.quote($name);
     font-weight: $weight;
     font-style: $style;
     src: $src;
@@ -73,10 +73,11 @@
 @mixin ellipsis($line: 1) {
   overflow: hidden;
   text-overflow: ellipsis;
-  @if ($line == 1) {
+
+  @if $line == 1 {
     white-space: nowrap;
   } @else {
-    display: -webkit-box;
+    display: box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: $line;
   }
