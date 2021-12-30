@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -w"
+    "build": "webpack -w",
+    "stylelint": "stylelint **/*.scss --fix"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,10 @@
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "glob-import-loader": "^1.2.0",
+    "stylelint": "^14.2.0",
+    "stylelint-config-standard-scss": "^3.0.0"
   }
 }
