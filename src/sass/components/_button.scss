@@ -4,7 +4,6 @@ $btn-colors: (
   submit: ($white-color, currentColor, currentColor),
   light: (#666, transparent, $white-color)
 );
-
 $btn-size: (
   small: (
     $font-size-s,
@@ -28,6 +27,7 @@ $btn-size: (
   border-radius: 4px;
   border-width: 1px;
   border-style: solid;
+
   &:disabled {
     opacity: 0.4;
     pointer-events: none;
@@ -36,16 +36,16 @@ $btn-size: (
   // color
   @each $theme, $colors in $btn-colors {
     &--#{$theme} {
-      color: nth($colors, 1);
-      border-color: nth($colors, 2);
-      background-color: nth($colors, 3);
+      color: list.nth($colors, 1);
+      border-color: list.nth($colors, 2);
+      background-color: list.nth($colors, 3);
     }
   }
 
   // size
   @each $theme, $size in $btn-size {
     &--#{$theme} {
-      font-size: nth($size, 1);
+      font-size: list.nth($size, 1);
     }
   }
 
@@ -54,6 +54,7 @@ $btn-size: (
     @include size(50px);
 
     transform: translateY(-50%);
+
     &::before,
     &::after {
       @include absolute($top: 50%, $left: 50%);
@@ -62,23 +63,28 @@ $btn-size: (
       content: "";
       background-color: #666;
     }
+
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
+
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
+
   &--delete {
     @include absolute($top: 50%, $right: 0);
 
     padding: 13px;
     transform: translateY(-50%);
+
     &::before {
       @include size(16px);
 
       content: "";
       display: block;
+
       // background: url($path-img + 'ico_close.svg') 0 0 / 100% no-repeat;
     }
   }

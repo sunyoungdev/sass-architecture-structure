@@ -3,7 +3,7 @@
   @if $container {
     @return $current / $container * 100%;
   } @else {
-    @error '$container is not defained';
+    @error "$container is not defained";
   }
 }
 

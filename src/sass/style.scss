@@ -1,25 +1,16 @@
 @charset "UTF-8";
 
 // abstract
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
-@import 'abstracts/function';
+@import "abstracts/*";
 
 // base
-@import 'base/reset';
-@import 'base/helper';
+@import "base/*";
 
 // components
-@import 'components/button';
-@import 'components/tab';
-@import 'components/tooltip';
+@import "components/*";
 
 // layout
-@import 'layout/header';
-@import 'layout/navigation';
-@import 'layout/footer';
+@import "layout/*";
 
 // pages
-@import 'pages/home';
-@import 'pages/contact';
-
+@import "pages/*";
